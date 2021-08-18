@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/cc49604116.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <title>Instagram Bootstrap</title>
+</head>
+    <style>
+        .main{
+            background: rgb(219, 218, 218);
+            min-height: 100vh;
+        }
+
+        .navbg{
+            background: rgb(243, 243, 247);
+        }
+        .nav2{
+            background: rgb(255, 255, 255);
+            margin-top: 70px;
+        }
+        .font{
+            font-family: 'Courgette', cursive;
+            font-size: 20px;
+            color: rgb(105, 105, 114);
+        }
+        .rowPhoto div{
+            height: 200px;
+            background-size:cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border: 1px solid rgb(105, 105, 114);
+        }
+
+        .post{
+            background-size:cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .bg1{
+            background-image: url(./images/descarga.jpeg);
+        }
+        .bg2{
+            background-image: url(./images/des2.jpeg);
+        }
+        .bg3{
+            background-image: url(./images/des3.jpeg);
+        }
+        .bg4{
+            background-image: url(./images/des4.jpeg);
+        }
+        .bg5{
+            background-image: url(./images/des5.jpeg);
+        }
+        .bg6{
+            background-image: url(./images/des6.jpeg);
+        }
+        .bg7{
+            background-image: url(./images/des7.jpeg);
+        }
+        .bg8{
+            background-image: url(./images/des8.jpeg);
+        }
+        .bg9{
+            background-image: url(./images/des9.jpeg);
+        }
+        
+    </style>
+<body>
+    <div class='container-fluid p-0'>
+        <!-- first nav -->
+        <div class="row">
+            <nav class="navbar fixed-top navbar-light navbg p-3">
+                <div class="container">
+                    <div class="col-6 text-center">
+                        <div class="row justify-content-start align-items-center">
+                            <div class="col-12  d-flex ">
+                                <i class="fab fa-instagram mt-1 me-2" style="color:rgb(105, 105, 114);font-size: 23px;"></i>
+                                <p class=" mb-0 font">Instagram</p>
+                            </div>
+                        </div>  
+                    </div>
+
+                    <div class="col-6  d-flex justify-content-end"> 
+                            <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-success me-3 py-1 " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Create a new post
+                        </button>
+            
+                        <div class="dropdown mt-1" >
+                            <i  class="dropdown-toggle fas fa-cog " id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false"style="color: rgb(105, 105, 114);"></i>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenu2">
+                            <li><button class="dropdown-item" type="button">Action</button></li>
+                            <li><button class="dropdown-item" type="button">Another action</button></li>
+                            <li><button class="dropdown-item" type="button">Something else here</button></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                    </div>        
+                </div>
+            <nav>
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content"> 
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-outline-dark px-1 py-0"><i class="fas fa-camera"></i></button>
+                        <button type="button" class="btn btn-outline-dark px-2 py-0"><i class="fas fa-map-marker-alt"></i></button>   
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary">Publish</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+           
+        
+            <!-- second nav  -->
+        <div class="row">
+            <nav class="navbar navbar-light nav2">
+                <div class="container">
+                  <div class="col-12 text-center">
+                    <button 
+                        type="button" 
+                        class="btn btn-outline-dark   border-0 py-1"
+                        onclick="goViewGridPhoto()">
+                        <i class="fas fa-border-all" style="color: rgb(161, 161, 170);"></i>
+                    </button>
+                    
+                    <button 
+                        type="button" 
+                        class="btn btn-outline-dark   border-0 py-1"
+                        onclick="goViewPost()">
+                        <i class="fas fa-square" style="color: rgb(161, 161, 170);"></i>
+                    </button>
+                   
+                  </div>
+                </div>
+            </nav>
+        </div>
+
+                  
+        
+          <!-- contained-->
+        
+        <div class="row">
+            <div class="col-12 main">
+              <!-- grid the photo -->
+                <div  id="gridPhoto" class="container-fluid d-block ">
+
+                    <div class="row rowPhoto ">
+                        <div class="col-4  bg1"> </div>
+                        <div class="col-4  bg2"></div>
+                        <div class="col-4  bg3 img"></div>   
+                    </div>
+
+                    <div class="row rowPhoto">
+                        <div class="col-4  p-0  bg4"> </div>
+                        <div class="col-4 p-0  bg5"></div>
+                        <div class="col-4 p-0  bg6 "></div>   
+                    </div>
+
+                    <div class="row rowPhoto">
+                        <div class="col-4  p-0  bg7"> </div>
+                        <div class="col-4 p-0  bg8"></div>
+                        <div class="col-4 p-0  bg9"></div>   
+                    </div>
+                </div>
+             <!-- post -->
+
+                <div id="post" class="container d-none">
+
+                    <div class="card  w-50  mx-auto mt-2 " >
+                        <div class="row border-bottom px-2 pt-3">
+                            <div class="col-6 card-title ">
+                                <h5>Mi primera postal</h5>
+                            </div>
+                            <div class="col-6 text-end  card-text">1/9</div>
+                        </div>
+                        <div class="bg1 post " style="height: 350px;"></div>
+                        <div class="card-body">
+                            <div class="card text border-0 mb-2">1932 likes</div>
+                            <div class="card text border-0 mb-2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti repellat eius consequatur temporibus? Voluptatem nihil, earum eveniet omnis consectetur quisquam? Itaque, mollitia. Possimus quis consequuntur reprehenderit incidunt doloribus explicabo soluta.
+                            </div>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                            <p class="d-inline">comment...</p>
+                        </div>  
+                    </div>
+
+                    <div class="card  w-50  mx-auto mt-2 " >
+                        <div class="row border-bottom px-2 pt-3">
+                            <div class="col-6 card-title ">
+                                <h5>Mi second postal</h5>
+                            </div>
+                            <div class="col-6 text-end  card-text">2/9</div>
+                        </div>
+                        <div class="bg2 post " style="height: 350px;"></div>
+                        <div class="card-body">
+                            <div class="card text border-0 mb-2 ">132 likes</div>
+                            <div class="card text border-0 mb-2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti repellat eius consequatur temporibus? Voluptatem nihil, earum eveniet omnis consectetur quisquam? Itaque, mollitia. Possimus quis consequuntur reprehenderit incidunt doloribus explicabo soluta.
+                            </div>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                            <p class="d-inline">comment...</p>
+                        </div>  
+                    </div>
+
+                    <div class="card w-50  mx-auto mt-2 " >
+                        <div class="row border-bottom px-2 pt-3">
+                            <div class="col-6 card-title ">
+                                <h5>Mi post</h5>
+                            </div>
+                            <div class="col-6 text-end  card-text">3/9</div>
+                        </div>
+                        <div class="bg3 post " style="height: 350px;"></div>
+                        <div class="card-body">
+                            <div class="card text border-0 mb-2">1322 likes</div>
+                            <div class="card text border-0 mb-2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti repellat eius consequatur temporibus? Voluptatem nihil, earum eveniet omnis consectetur quisquam? Itaque, mollitia. Possimus quis consequuntur reprehenderit incidunt doloribus explicabo soluta.
+                            </div>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                            <p class="d-inline">comment...</p>
+                        </div>  
+                    </div>
+
+                    <div class="card  w-50  mx-auto mt-2 " >
+                        <div class="row border-bottom px-2 pt-3">
+                            <div class="col-6 card-title ">
+                                <h5>Mi post</h5>
+                            </div>
+                            <div class="col-6 text-end  card-text">4/9</div>
+                        </div>
+                        <div class="bg4 post " style="height: 350px;"></div>
+                        <div class="card-body">
+                            <div class="card text border-0 mb-2">1932 likes</div>
+                            <div class="card text border-0 mb-2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti repellat eius consequatur temporibus? Voluptatem nihil, earum eveniet omnis consectetur quisquam? Itaque, mollitia. Possimus quis consequuntur reprehenderit incidunt doloribus explicabo soluta.
+                            </div>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                            <p class="d-inline">comment...</p>
+                        </div>  
+                    </div>
+                    <div class="card  w-50  mx-auto mt-2 " >
+                        <div class="row border-bottom px-2 pt-3">
+                            <div class="col-6 card-title ">
+                                <h5>mi post</h5>
+                            </div>
+                            <div class="col-6 text-end  card-text">5/9</div>
+                        </div>
+                        <div class="bg5 post " style="height: 350px;"></div>
+                        <div class="card-body">
+                            <div class="card text border-0  mb-2">24 likes</div>
+                            <div class="card text border-0 mb-2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti repellat eius consequatur temporibus? Voluptatem nihil, earum eveniet omnis consectetur quisquam? Itaque, mollitia. Possimus quis consequuntur reprehenderit incidunt doloribus explicabo soluta.
+                            </div>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                            <p class="d-inline">comment...</p>
+                        </div>  
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            
+        </div>
+       
+        
+          
+    
+       
+      
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script>
+        let viewPost= document.getElementById('post')
+        let viewGridPhoto= document.getElementById('gridPhoto')
+
+        const goViewGridPhoto=()=>{
+            viewGridPhoto.classList.replace("d-none", "d-block")
+            viewPost.classList.replace('d-block','d-none')
+        }
+
+        const goViewPost=()=>{
+            viewGridPhoto.classList.replace("d-block", "d-none")
+            viewPost.classList.replace('d-none','d-block')
+        }
+    </script>
+</body>
+</html>
